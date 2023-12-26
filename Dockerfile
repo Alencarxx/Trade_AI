@@ -11,12 +11,14 @@ WORKDIR /src
 COPY . .
 
 #------------------------ Instale as dependências
-RUN pip install pandas
-RUN pip install matplotlib
-RUN pip install seaborn
-RUN pip install chardet
 RUN pip install math
-
+RUN pip install random
+RUN pip install numpy
+RUN pip install pandas
+RUN pip install tensorflow
+RUN pip install matplotlib
+RUN pip install pandas_datareader
+RUN pip install tqdm
 
 #------------------------ Comando para executar sua aplicação
 CMD ["python", "src/tradeai.py"]
